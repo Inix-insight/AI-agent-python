@@ -11,7 +11,7 @@ def get_file_content(working_directory, file_path):
             return f"Error: Cannot list \"{file_path}\" as it is outside the permitted working directory\n"
         
         if not path.isfile(full_path):
-            return f"Error: File not found or is not a regular file: \"{file_path}\""
+            return f"Error: File not found or is not a regular file: \"{file_path}\"\n"
         
         file = open(full_path)
         content = file.read(MAX_CHARS)
